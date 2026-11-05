@@ -81,6 +81,7 @@ fn translateC(b: *std.Build, options: TranslateCOptions) ?std.Build.LazyPath {
         .target = options.target,
         .optimize = options.optimize,
         .link_libc = options.link_libc,
+        .char_signedness = .unsigned,
     });
     return tc.output_file;
 }
